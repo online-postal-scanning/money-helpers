@@ -1,0 +1,31 @@
+{
+  "name": "iampersistent/money-helpers",
+  "type": "library",
+  "description": "Classes for with with Money",
+  "keywords": ["Money"],
+  "license": "MIT",
+  "require": {
+    "ext-json": "*",
+    "moneyphp/money": "^3.0@dev",
+    "php": ">=7.2"
+  },
+  "require-dev": {
+    "codeception/codeception": "^2.4",
+    "ext-yaml": "*"
+  },
+  "repositories": {
+  },
+  "minimum-stability": "dev",
+  "autoload": {
+    "psr-4": {
+      "IamPersistent\\Money\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\Fixture\\": "tests/_support/Fixture",
+      "Tests\\Functional\\": "tests/functional",
+      "Tests\\Unit\\": "tests/unit"
+    }
+  }
+}
