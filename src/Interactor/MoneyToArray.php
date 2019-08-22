@@ -7,7 +7,7 @@ use Money\Money;
 
 final class MoneyToArray
 {
-    public function __invoke(Money $money): string
+    public function __invoke(Money $money): array
     {
         return [
             'amount'   => (int)$money->getAmount(),
