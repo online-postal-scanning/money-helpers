@@ -11,7 +11,7 @@ final class MoneyToJson
     {
         $json = [
             'amount'   => (int)$money->getAmount(),
-            'currency' => $money->getCurrency(),
+            'currency' => $money->getCurrency()->getCode(),
         ];
 
         return json_encode($json);
