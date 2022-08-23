@@ -11,7 +11,7 @@ final class MoneyToArray
     {
         return [
             'amount'   => (int)$money->getAmount(),
-            'currency' => $money->getCurrency(),
+            'currency' => $money->getCurrency()->getCode(),
         ];
     }
 }
