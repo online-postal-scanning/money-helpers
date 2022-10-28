@@ -10,8 +10,8 @@ final class NumberToMoney
 {
     public function __invoke($amount): Money
     {
-        $money = new Money($amount,  new Currency('USD'));
+        $amount *= 100;
 
-        return $money->multiply(100);
+        return new Money((int)$amount,  new Currency('USD'));
     }
 }
