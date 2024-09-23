@@ -1,31 +1,28 @@
 {
-  "name": "iampersistent/money-helpers",
+  "name": "olps/money-helpers",
   "type": "library",
-  "description": "Classes for with with Money",
+  "description": "Classes for interacting with Money",
   "keywords": ["Money"],
   "license": "MIT",
   "require": {
+    "ext-intl": "*",
     "ext-json": "*",
     "moneyphp/money": "^4.0.5",
     "php": "^8.0"
   },
   "require-dev": {
-    "codeception/codeception": "^2.4",
-    "ext-yaml": "*"
-  },
-  "repositories": {
+    "ext-yaml": "*",
+    "phpunit/phpunit": "^11.4@dev"
   },
   "minimum-stability": "dev",
   "autoload": {
     "psr-4": {
-      "IamPersistent\\Money\\": "src/"
+      "OLPS\\Money\\": "src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "Tests\\Fixture\\": "tests/_support/Fixture",
-      "Tests\\Functional\\": "tests/functional",
-      "Tests\\Unit\\": "tests/unit"
+      "Tests\\Unit\\OLPS\\Money\\": "tests/Unit"
     }
   }
 }

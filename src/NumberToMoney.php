@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace IamPersistent\Money\Interactor;
+namespace OLPS\Money;
 
 use Money\Currency;
 use Money\Money;

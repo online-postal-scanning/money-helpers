@@ -1,17 +1,19 @@
 <?php
 declare(strict_types=1);
 
-namespace IamPersistent\Money\Interactor;
+namespace OLPS\Money;
 
 use Money\Money;
 
-final class MoneyToArray
+final class MoneyToJson
 {
-    public function __invoke(Money $money): array
+    public function __invoke(Money $money): string
     {
-        return [
+        $json = [
             'amount'   => (int)$money->getAmount(),
             'currency' => $money->getCurrency()->getCode(),
         ];
+
+        return json_encode($json);
     }
 }
