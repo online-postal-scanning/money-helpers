@@ -23,7 +23,7 @@ final class ArrayToNumberTest extends TestCase
             'currency' => 'USD',
         ];
         $result = ($this->arrayToNumber)($input);
-        $this->assertEquals(10.0, $result);
+        $this->assertSame(10.0, $result);
     }
 
     public function testInvokeWithNegativeAmount()
@@ -33,7 +33,7 @@ final class ArrayToNumberTest extends TestCase
             'currency' => 'USD',
         ];
         $result = ($this->arrayToNumber)($input);
-        $this->assertEquals(-5.00, $result);
+        $this->assertSame(-5.00, $result);
     }
 
     public function testInvokeWithZeroAmount()
@@ -43,7 +43,7 @@ final class ArrayToNumberTest extends TestCase
             'currency' => 'USD',
         ];
         $result = ($this->arrayToNumber)($input);
-        $this->assertEquals(0.00, $result);
+        $this->assertSame(0.00, $result);
     }
 
     public function testInvokeWithMissingAmount()

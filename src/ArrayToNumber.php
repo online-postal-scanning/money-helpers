@@ -10,10 +10,10 @@ final class ArrayToNumber
 {
     use FormatMoneyTrait;
 
-    public function __invoke(array $money): string
+    public function __invoke(array $money): float
     {
         $money = new Money($money['amount'], new Currency($money['currency']));
 
-        return $this->formatToNumeric($money);
+        return (float) $this->formatToNumeric($money);
     }
 }

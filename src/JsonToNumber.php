@@ -7,10 +7,10 @@ final class JsonToNumber
 {
     use FormatMoneyTrait;
 
-    public function __invoke(string $json): string
+    public function __invoke(string $json): float
     {
         $money = (new JsonToMoney)($json);
 
-        return $this->formatToNumeric($money);
+        return (float) $this->formatToNumeric($money);
     }
 }

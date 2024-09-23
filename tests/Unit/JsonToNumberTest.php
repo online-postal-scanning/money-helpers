@@ -21,7 +21,7 @@ class JsonToNumberTest extends TestCase
     {
         $json = '{"amount": "1000", "currency": "USD"}';
         $result = ($this->jsonToNumber)($json);
-        $this->assertEquals('10.00', $result);
+        $this->assertSame(10.00, $result);
     }
 
     public function testInvokeWithInvalidJson()
@@ -42,13 +42,13 @@ class JsonToNumberTest extends TestCase
     {
         $json = '{"amount": "-500", "currency": "USD"}';
         $result = ($this->jsonToNumber)($json);
-        $this->assertEquals('-5.00', $result);
+        $this->assertSame(-5.00, $result);
     }
 
     public function testInvokeWithZeroAmount()
     {
         $json = '{"amount": "0", "currency": "USD"}';
         $result = ($this->jsonToNumber)($json);
-        $this->assertEquals('0.00', $result);
+        $this->assertSame(0.00, $result);
     }
 }

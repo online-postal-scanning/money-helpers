@@ -7,10 +7,10 @@ use Money\Money;
 
 final class MoneyToNumber
 {
-    public function __invoke(Money $money): int
-    {
-        $json = $money->jsonSerialize();
+    use FormatMoneyTrait;
 
-        return (int) ((int) $json['amount'] / 100);
+    public function __invoke(Money $money): float
+    {
+        return (float) $this->formatToNumeric($money);
     }
 }
